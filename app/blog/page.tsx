@@ -1,13 +1,14 @@
 import Link from "next/link";
+import axios from "axios";
 
 async function getBlogPosts() {
-  const blogs = await [1,2,3,4,5].map((item) => ({
-    id: item,
-    title: `Article ${item}`,
-    meta: `article ${item} metadata`,
-    body: `Body of article ${item}`,
-  }));
-  return blogs
+  try {
+    const { data } = await axios.get(`${process.env.EP}blogs`)
+    return data
+  } catch (err) {
+    console.log(err)
+    return []
+  }
 }
 
 export default async function Blog() {
@@ -20,8 +21,8 @@ export default async function Blog() {
         <p className="text-[1.25rem]">These are a few blogs related to our apps. There are some issues new users might encounter and we hope these posts help!</p>
       </div>
       <br />
-      {<ul>
-        {Array.isArray(blogs) ? blogs.map((blog, index) => (
+      {Array.isArray(blogs) && blogs.length > 0 ? <ul>
+        {blogs.map((blog, index) => (
           <li key={index} className="">
             <Link href={`/blog/${blog.id}`} target="_blank">
               <div className="cursor-pointer transition-all ease-in-out duration-200 hover:bg-green-400 rounded-lg p-5">
@@ -31,8 +32,8 @@ export default async function Blog() {
             </Link>
             <hr /><br />
           </li>
-        )) : null}
-      </ul>}
+        ))}
+      </ul> : <div className="flex items-center justify-center font-semibold italic text-[1.5rem] h-[50vh]">No Articles Available</div>}
     </section>
   )
 }

@@ -1,20 +1,24 @@
+import axios from "axios";
+
 export async function getBlogPost(id: number | string) {
-  return {
-    id,
-    title: `Article ${id}`,
-    meta: `metadata of article ${id}`,
-    body: `Body of article ${id}`,
+  try {
+    const { data } = await axios.get(`${process.env.EP}blog/${id}`)
+    return data;
+  } catch (err) {
+    return null;
   }
 }
 
 export default async function BlogPost({ params }: { params: { id: string | number } }) {
-  const blog = await getBlogPost(params.id);
+  const blog = await getBlogPost(params.id); console.log(blog)
 
   return(
     <section className="h-screen p-20">
-      <h1 className="font-semibold text-[2rem]">{blog.title}</h1>
-      <br /><hr /><br />
-      <p className="text-[1.25rem]">{blog.body}</p>
+      {blog?.id ? <>
+        <h1 className="font-semibold text-[2rem]">{blog.title}</h1>
+        <br /><hr /><br />
+        <p className="text-[1.25rem]">{blog.body}</p>
+      </> : <div className="flex items-center justify-center font-semibold text-[1.5rem] h-[50vh]">404 | Article Not Found</div>}
     </section>
   )
 }
