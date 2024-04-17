@@ -1,6 +1,7 @@
+import Link from "next/link";
+
 import HomeHeroAnimation from "@/components/client/home-hero-animation";
 import TestimonialCarousel from "@/components/client/testimonial-carousel";
-import Link from "next/link";
 
 export default function Home() {
   return (
