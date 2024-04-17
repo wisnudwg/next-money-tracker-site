@@ -2,7 +2,7 @@ import axios from "axios";
 
 export async function getBlogPost(id: number | string) {
   try {
-    const { data } = await axios.get(`${process.env.EP}blog/${id}`)
+    const { data } = await axios.get(`${process.env.EP}blogs/${id}`)
     return data;
   } catch (err) {
     return null;
