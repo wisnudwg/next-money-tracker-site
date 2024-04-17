@@ -1,12 +1,17 @@
 import Link from "next/link";
 
-export default function Blog() {
-  const blogs = [1,2,3,4,5].map((item) => ({
+async function getBlogPosts() {
+  const blogs = await [1,2,3,4,5].map((item) => ({
     id: item,
     title: `Article ${item}`,
     meta: `article ${item} metadata`,
     body: `Body of article ${item}`,
   }));
+  return blogs
+}
+
+export default async function Blog() {
+  const blogs = await getBlogPosts();
 
   return(
     <section className="h-screen p-10">
