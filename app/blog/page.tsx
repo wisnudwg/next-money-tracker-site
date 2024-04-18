@@ -15,7 +15,7 @@ export default async function Blog() {
   const blogs = await getBlogPosts();
 
   return(
-    <section className="h-screen p-10">
+    <section className="min-h-screen p-10">
       <div className="text-center mb-10">
         <h1 className="font-semibold text-[2rem]">Blogs</h1>
         <p className="text-[1.25rem]">These are a few blogs related to our apps. There are some issues new users might encounter and we hope these posts help!</p>
