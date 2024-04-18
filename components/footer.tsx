@@ -22,7 +22,7 @@ export default function Footer() {
     }
   ];
   return(
-    <footer className="grid grid-cols-2 w-screen bg-green-900 text-white py-10">
+    <footer className="grid grid-cols-2 w-full bg-green-900 text-white py-10">
       <div className="flex justify-center align-middle">
         <div>
           <Image src={money_tracker_logo} alt="money_tracker_logo" width={300} height={300} />

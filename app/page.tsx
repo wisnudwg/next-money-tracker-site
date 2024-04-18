@@ -5,7 +5,7 @@ import TestimonialCarousel from "@/components/client/testimonial-carousel";
 
 export default function Home() {
   return (
-    <section className="w-screen">
+    <section>
       <HeroSection />
       <Testimonials />
       <CTA /> 

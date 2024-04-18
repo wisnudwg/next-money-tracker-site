@@ -17,7 +17,7 @@ export default function HomeHeroAnimation() {
       initial="hidden"
       animate="show"
       transition={{ delay: 0.2 }}
-      className="flex items-center justify-center gap-20 h-screen w-screen my-10 relative"
+      className="flex items-center justify-center gap-20 h-screen w-full my-10 relative"
     >
       <div className="absolute top-0 right-0 bg-green-900 w-[400px] h-[400px] blur-[120px] overflow-x-hidden"></div>
       <div className="absolute bottom-0 left-0 bg-green-400 w-[400px] h-[400px] blur-[120px] overflow-x-hidden"></div>
