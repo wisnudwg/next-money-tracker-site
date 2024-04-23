@@ -1,7 +1,7 @@
 import axios from "axios";
 import BlogAnimation from "@/components/client/blog-animation";
 
-export async function getBlogPost(id: number | string) {
+async function getBlogPost(id: number | string) {
   try {
     const { data } = await axios.get(`${process.env.EP}blogs/${id}`)
     return data;
