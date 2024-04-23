@@ -43,7 +43,7 @@ function CTA() {
       <h2 className="font-semibold text-[1.75rem]">Register Now!</h2>
       <p className="text-[1.25rem]">
         Interested in using <b>Money Tracker</b>? 
-        Register <a href={process.env.APP_REGISTER_URL} target="_blank" className="font-semibold text-green-900 hover:text-green-400 transition-all ease-in-out duration-200">here</a>
+        Register <a href={process.env.APP_REGISTER_URL} target="_blank" className="cursor-pointer font-semibold text-green-900 hover:text-green-400 transition-all ease-in-out duration-200">here</a>
       </p>
     </div>
   )
