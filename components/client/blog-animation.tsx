@@ -15,6 +15,8 @@ export default function BlogAnimation({ children }: { children: React.ReactNode 
       initial="hidden"
       animate="show"
       transition={{ delay: 0.2, ease: 'easeInOut' }}
-    >{children}</motion.div>
+    >
+      {children}
+    </motion.div>
   )
 }
