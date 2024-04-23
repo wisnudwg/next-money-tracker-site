@@ -6,6 +6,7 @@ export default function Header() {
     { title: 'Features', href: '/features' },
     { title: 'Blog', href: '/blog' },
   ];
+  
   return(
     <header className="sticky top-0 inline-flex justify-center align-middle w-full gap-10 line-clamp-4 font-semibold text-[1.2rem] bg-green-900 py-5 z-10">
       {routes.map((route, index) => (
