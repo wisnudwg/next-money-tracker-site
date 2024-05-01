@@ -11,7 +11,7 @@ async function getBlogPost(id: number | string) {
 }
 
 export default async function BlogPost({ params }: { params: { id: string | number } }) {
-  const blog = await getBlogPost(params.id); console.log(blog)
+  const blog = await getBlogPost(params.id);
 
   return(
     <section className="h-screen p-20">
