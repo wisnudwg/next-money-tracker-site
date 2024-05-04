@@ -138,9 +138,9 @@ function FeaturesSection() {
     <div className="flex justify-center h-screen gap-20 relative">
       <div className="absolute bottom-0 left-0 bg-green-400 w-[300px] h-[300px] blur-[150px]"></div>
       <div className="absolute bottom-0 right-0 bg-green-900 w-[300px] h-[300px] blur-[150px]"></div>
-      <div>
-        <Tabs defaultValue={tabs[0].value} className="">
-          <TabsList className="w-[90vw] gap-[10vw] leading-5 bg-transparent">
+      <div className="">
+        <Tabs defaultValue={tabs[0].value}>
+          <TabsList className="flex-col lg:flex-row lg:w-[90vw] lg:gap-[10vw] lg:leading-5 bg-white lg:bg-transparent">
             {tabs.map((tab, index) => (
               <TabsTrigger
                 key={index}
@@ -150,31 +150,31 @@ function FeaturesSection() {
             ))}
           </TabsList>
           {tabs.map((tab, index) => (
-            <TabsContent key={index} value={tab.value} className="">
+            <TabsContent key={index} value={tab.value} className="w-[50vw] mt-10 lg:mt-0 lg:w-fit">
               <Carousel
                 opts={{
                   align: "start",
                   loop: true,
                 }}
-                className="w-[80vw] relative"
+                className="lg:w-[80vw] relative"
               >
                 <CarouselContent>
                   {tab.carousel.map((item, index) => (
                     <CarouselItem key={index} className="mt-20">
-                      <div className="flex items-center justify-center gap-10">
-                        <div className="w-1/2">
+                      <div className="flex items-center justify-center gap-10 flex-col lg:flex-row">
+                        <div className="lg:w-1/2">
                           <Image src={item.img} alt="" width={item.size} className="float-right" />
                         </div>
-                        <div className="w-1/3">
-                          <h3 className="font-semibold text-[2rem]">{item.title}</h3>
-                          <p className="text-[1.25rem]">{item.copy}</p>
+                        <div className="text-center lg:text-left lg:w-1/3">
+                          <h3 className="font-semibold text-[1.5rem] lg:text-[2rem] mb-5 lg:mb-0">{item.title}</h3>
+                          <p className="text-[1rem] lg:text-[1.25rem]">{item.copy}</p>
                         </div>
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute left-[50vw] top-[50vh] bg-green-400 scale-125" />
-                <CarouselNext className="absolute right-[25vw] top-[50vh] bg-green-900 text-green-400 scale-125" />
+                <CarouselPrevious className="absolute left-[-60px] lg:left-[50vw] top-[30vh] lg:top-[50vh] bg-green-400 scale-125" />
+                <CarouselNext className="absolute right-[-60px] lg:right-[25vw] top-[30vh] lg:top-[50vh] bg-green-900 text-green-400 scale-125" />
               </Carousel>
             </TabsContent>
           ))}
