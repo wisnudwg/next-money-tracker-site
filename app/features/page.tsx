@@ -150,7 +150,7 @@ function FeaturesSection() {
             ))}
           </TabsList>
           {tabs.map((tab, index) => (
-            <TabsContent key={index} value={tab.value} className="w-[50vw] mt-10 lg:mt-0 lg:w-fit">
+            <TabsContent key={index} value={tab.value} className="w-[50vw] mt-24 lg:mt-0 lg:w-fit">
               <Carousel
                 opts={{
                   align: "start",
