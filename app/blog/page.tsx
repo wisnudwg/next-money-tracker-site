@@ -26,7 +26,7 @@ export default async function Blog() {
           <li key={index} className="">
             <Link href={`/blog/${blog.id}`} target="_blank">
               <div className="cursor-pointer transition-all ease-in-out duration-200 hover:bg-green-400 rounded-lg p-5">
-                <h2 className="font-semibold text-[1.5rem]">{blog.title}</h2>
+                <h2 className="font-semibold text-[1.5rem] text-green-900 lg:text-black">{blog.title}</h2>
                 <p className="">{blog.metadata}</p>
               </div>
             </Link>

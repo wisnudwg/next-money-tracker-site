@@ -14,7 +14,7 @@ export default async function BlogPost({ params }: { params: { id: string | numb
   const blog = await getBlogPost(params.id);
 
   return(
-    <section className="h-screen p-20">
+    <section className="h-screen p-5 lg:p-20">
       <BlogAnimation>
         {blog?.id ? <>
           <h1 className="font-semibold text-[2rem]">{blog.title}</h1>
