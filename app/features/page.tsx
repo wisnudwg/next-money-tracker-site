@@ -136,8 +136,8 @@ function FeaturesSection() {
   ];
   return(
     <div className="flex justify-center h-screen gap-20 relative">
-      <div className="absolute bottom-0 left-0 bg-green-400 w-[300px] h-[300px] blur-[150px]"></div>
-      <div className="absolute bottom-0 right-0 bg-green-900 w-[300px] h-[300px] blur-[150px]"></div>
+      <div className="absolute bottom-0 left-0 lg:bg-green-400 w-[300px] h-[300px] blur-[150px]"></div>
+      <div className="absolute bottom-0 right-0 lg:bg-green-900 w-[300px] h-[300px] blur-[150px]"></div>
       <div className="">
         <Tabs defaultValue={tabs[0].value}>
           <TabsList className="flex-col lg:flex-row lg:w-[90vw] lg:gap-[10vw] lg:leading-5 bg-white lg:bg-transparent">

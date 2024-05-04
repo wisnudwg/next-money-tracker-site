@@ -19,8 +19,8 @@ export default function HomeHeroAnimation() {
       transition={{ delay: 0.2 }}
       className="text-center relative h-[600px] lg:flex items-center justify-center gap-20 lg:h-screen w-full my-10"
     >
-      <div className="absolute bottom-0 right-0 bg-green-900 w-[100px] h-[100px] blur-[70px] lg:top-0 lg:w-[400px] lg:h-[400px] lg:blur-[120px]"></div>
-      <div className="absolute bottom-0 left-0 bg-green-400 w-[100px] h-[100px] blur-[50px] lg:w-[400px] lg:h-[400px] lg:blur-[120px]"></div>
+      <div className="absolute bottom-0 right-0 bg-green-900 w-[100px] h-[100px] blur-[85px] lg:top-0 lg:w-[400px] lg:h-[400px] lg:blur-[120px]"></div>
+      <div className="absolute bottom-0 left-0 bg-green-400 w-[100px] h-[100px] blur-[65px] lg:w-[400px] lg:h-[400px] lg:blur-[120px]"></div>
       <div>
         <Image src={money_tracker_logo} alt="money_tracker_logo" width={500} height={500} />
       </div>

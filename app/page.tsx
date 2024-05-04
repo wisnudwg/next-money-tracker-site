@@ -5,7 +5,7 @@ import TestimonialCarousel from "@/components/client/testimonial-carousel";
 
 export default function Home() {
   return (
-    <section className="px-1 lg:px-0">
+    <section className="mx-10 lg:mx-0">
       <HeroSection />
       <Testimonials />
       <CTA /> 
@@ -36,8 +36,8 @@ function Testimonials() {
 function CTA() {
   return(
     <div className="flex flex-col gap-10 items-center justify-center h-[100vh] lg:h-[50vh] my-10 relative">
-      <div className="absolute bottom-30 lg:bottom-0 left-0 bg-green-900 w-[100px] h-[100px] blur-[60px] lg:w-[300px] lg:h-[300px] lg:blur-[150px]"></div>
-      <div className="absolute bottom-30 lg:bottom-0 right-0 bg-green-400 w-[100px] h-[100px] blur-[60px] lg:w-[300px] lg:h-[300px] lg:blur-[150px]"></div>
+      <div className="absolute bottom-30 lg:bottom-0 left-0 bg-green-900 w-[100px] h-[100px] blur-[70px] lg:w-[300px] lg:h-[300px] lg:blur-[150px]"></div>
+      <div className="absolute bottom-30 lg:bottom-0 right-0 bg-green-400 w-[100px] h-[100px] blur-[70px] lg:w-[300px] lg:h-[300px] lg:blur-[150px]"></div>
       <h2 className="font-semibold text-[1.75rem] text-center lg:text-left">Check out our features <Link href="/features" className="font-light text-green-900 hover:text-green-400 transition-all ease-in-out duration-200">here</Link></h2>
       <p className="text-[1.25rem]">OR</p>
       <h2 className="font-semibold text-[1.75rem]">Register Now!</h2>
