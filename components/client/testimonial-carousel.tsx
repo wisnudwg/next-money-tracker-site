@@ -37,7 +37,7 @@ export default function TestimonialCarousel() {
         align: "start",
         loop: true,
       }}
-      className="w-[50vw]"
+      className="lg:w-[50vw]"
       plugins={[
         Autoplay({ delay: 4000 })
       ]}
@@ -46,13 +46,13 @@ export default function TestimonialCarousel() {
         {testimonials.map((item, index) => (
           <CarouselItem key={index} className="">
             <div className="p-1">
-              <p className="text-[1.5rem]">{item.comment}</p>
+              <p className="italic text-center lg:text-left text-[1.5rem]">{item.comment}</p>
               <br />
               <hr />
               <br />
-              <div className="flex items-center justify-center gap-10">
+              <div className="flex items-center justify-center gap-5 flex-col lg:gap-10 lg:flex-row">
                 <div className="font-semibold text-[1.4rem]">{item.name}</div>
-                <div className="flex flex-col items-center justify-center gap-1">
+                <div className="flex flex-col items-center gap-1 justify-center">
                   <div>{item.status}</div>
                   <div className="font-semibold">{item.company}</div>
                 </div>
